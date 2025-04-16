@@ -24,7 +24,7 @@ export const Content = styled.div`
   box-sizing: border-box;
 `;
 
-export const BossGrid = styled.div`
+export const WeaponGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
@@ -60,24 +60,3 @@ export const Title = styled.h1`
   font-size: 42px;
 `;
 
-export const BossImage = styled.img`
-  width: 120px;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
-export const ImageCard = styled.img`
-  width: 120px;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-`;

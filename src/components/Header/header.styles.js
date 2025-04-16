@@ -16,7 +16,7 @@ export const Title = styled.h1`
 `
 
 export const Logo = styled.h1`
-  color: #f5c518;
+  color: rgb(204, 171, 80);
   font-size: 24px;
   margin: 0;
 `;
@@ -40,11 +40,11 @@ export const NavLink = styled(RouterNavLink)`
   transition: color 0.4s ease;
 
   &.active {
-    color: #f5c518;
+    color: rgb(204, 171, 80);
   }
 
   &:hover {
-    color: #f5c518;
+    color: rgb(204, 171, 80);
   }
 
   &:hover::after {
@@ -54,7 +54,7 @@ export const NavLink = styled(RouterNavLink)`
     left: 0;
     height: 2px;
     width: 100%;
-    background-color: #f5c518;
+    background-color: rgb(204, 171, 80);
     transition: width 0.3s ease;
   }
 `;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Modal from '../Modal/Modal';
+import Modal from '../../Modal/Index';
 import { Card, ImageCard, MoreInfo } from './BossCard.styles';
-import { BossImage } from '../../pages/Home/Home.styles';
+import { BossImage } from '../../../pages/Home/Home.styles';
 
 function BossCard({ boss }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +19,7 @@ function BossCard({ boss }) {
           <ImageCard src={boss.image} alt={boss.name} />
           <h2>{boss.name}</h2>
           <p><strong>Localização:</strong> {boss.location}</p>
+          <p><strong>Recompensas:</strong> {boss.drops}</p>
           <p><strong>Descrição:</strong> {boss.description || 'Sem descrição'}</p>
         </Modal>
       )}

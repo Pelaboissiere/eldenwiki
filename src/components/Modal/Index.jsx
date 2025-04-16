@@ -1,10 +1,10 @@
-import { Backdrop, ModalContent } from '.';
+import { Backdrop, ModalContent, CloseButton } from './Modal.styles'; 
 
 function Modal({ children, onClose }) {
   return (
     <Backdrop onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
-        <button onClick={onClose}>Fechar</button>
+        <CloseButton onClick={onClose}>X</CloseButton> 
         {children}
       </ModalContent>
     </Backdrop>
