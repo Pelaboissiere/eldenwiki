@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Modal from '../../Modal/Index';
-import { Card, ImageCard, MoreInfo } from './WeaponCard.styles'; 
+import { Card, CardName, ImageCard, MoreInfo } from './WeaponCard.styles'; 
 import { BossImage } from '../../../pages/Home/Home.styles'; 
 
 function WeaponCard({ weapon }) {
@@ -10,7 +10,7 @@ function WeaponCard({ weapon }) {
     <>
       <Card onClick={() => setIsOpen(true)}>
         <BossImage src={weapon.image} alt={weapon.name} />
-        <h3>{weapon.name}</h3> 
+        <CardName>{weapon.name}</CardName> 
         <MoreInfo>Clique para mais informações</MoreInfo>
       </Card>
 

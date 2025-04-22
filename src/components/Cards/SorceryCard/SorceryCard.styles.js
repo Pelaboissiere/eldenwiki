@@ -37,9 +37,8 @@ export const MoreInfo = styled.p`
 
 export const ImageCard = styled.img`
   width: 85%;
-  margin-left: 30px;
+  margin-left: 15px;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s;
 `;
-

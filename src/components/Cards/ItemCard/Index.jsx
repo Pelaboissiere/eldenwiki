@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card, ImageCard, MoreInfo } from './ItemCard.styles';
+import { Card, CardName, ImageCard, MoreInfo } from './ItemCard.styles';
 import Modal from '../../Modal/Index';
 
 function ItemCard({ item }) {
@@ -9,7 +9,7 @@ function ItemCard({ item }) {
     <>
       <Card onClick={() => setIsOpen(true)}>
         <ImageCard src={item.image} alt={item.name} />
-        <h3>{item.name}</h3>
+        <CardName>{item.name}</CardName>
         <MoreInfo>Clique para mais informações</MoreInfo>
       </Card>
 

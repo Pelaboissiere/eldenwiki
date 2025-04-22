@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Modal from '../../Modal/Index';
-import { Card, ImageCard, MoreInfo } from './BossCard.styles';
+import { Card, CardName, ImageCard, MoreInfo } from './BossCard.styles';
 import { BossImage } from '../../../pages/Home/Home.styles';
 
 function BossCard({ boss }) {
@@ -10,7 +10,7 @@ function BossCard({ boss }) {
     <>
       <Card onClick={() => setIsOpen(true)}>
         <BossImage src={boss.image} alt={boss.name} />
-        <h3>{boss.name}</h3>
+        <CardName>{boss.name}</CardName>
         <MoreInfo>Clique para mais informações</MoreInfo>
       </Card>
 

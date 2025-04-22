@@ -10,7 +10,6 @@ export const HomeContainer = styled.div`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   color: #fff;
   box-sizing: border-box;
-  
 `;
 
 export const Title = styled.h1`
@@ -35,4 +34,58 @@ export const BossImage = styled.img`
     margin-bottom: 5px;
     transform: scale(1.05);
   }
+`;
+
+export const Banner = styled.div`
+  width: 100%;
+  max-height: 400px;
+  margin-top: 2rem;
+  overflow: hidden;
+  border-radius: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Faz com que a imagem cubra o espaço sem distorcer */
+    border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    max-height: 300px;  // Ajusta para telas menores
+  }
+`;
+
+export const FeaturedBossWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+`;
+
+export const FeaturedTitle = styled.h2`
+  font-size: 2rem;
+  color: #f5c518;
+  margin-bottom: 1rem;
+  text-align: center;
+`;
+
+export const FeaturedImage = styled.img`
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-bottom: 32px;
+  
+  &:hover {
+    transform: scale(1.03);
+  }
+`;
+
+export const BossName = styled.h1`
+  font-size: 28px;
+  color: #fff;
+  margin-top: 1rem;
 `;

@@ -4,24 +4,35 @@ export const Card = styled.div`
   background-color: rgba(50, 50, 50, 0.7);
   color: #fff;
   padding: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
   max-width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
   &:hover {
     background-color: rgba(70, 70, 70, 0.9);
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
 `;
+
+export const CardName = styled.h3`
+    margin-bottom: 30px;
+`
 
 export const MoreInfo = styled.p`
   color: #ccc;
   margin-top: 15px;
   font-size: 12px;
+  position: absolute;
+  bottom: 10px; 
+  text-align: center;
+  left: 15px;
+  right: 15px;
 `;
 
 export const ImageCard = styled.img`
