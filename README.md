@@ -1,12 +1,46 @@
-# React + Vite
+🛡️ Elden Wiki
+Uma wiki interativa sobre o universo do jogo Elden Ring, desenvolvida com React + Vite, consumo de API externa, estilização com styled-components e deploy na Vercel.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+✨ Funcionalidades
+🔍 Navegação entre seções como bosses, armas, magias e encantamentos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📋 Ao clicar em qualquer item ou boss, um modal interativo mostra os detalhes.
 
-## Expanding the ESLint configuration
+🔄 A página inicial exibe um boss aleatório em destaque a cada acesso.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🎨 Estilização feita do zero com styled-components.
+
+🌐 Integração com a API pública do Elden Ring.
+
+🚀 Deploy feito na Vercel.
+
+🧪 Tecnologias utilizadas
+React
+
+- Vite
+
+- Styled-components
+
+- Axios
+
+- Vercel
+
+- Elden Ring FanAPI
+
+🛠️ Como rodar localmente
+
+# Clone o repositório
+git clone https://github.com/seu-usuario/elden-wiki.git
+
+# Acesse a pasta
+cd elden-wiki
+
+# Instale as dependências
+npm install
+
+# Inicie o projeto
+npm run dev
+
+🌐 Acesse o projeto online
+🔗 eldenwiki.vercel.app
