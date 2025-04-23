@@ -1,28 +1,34 @@
 import { useEffect, useState } from 'react';
 import Modal from '../../components/Modal/Index';
-import MalikethImage from '../../assets/maliketh.png'; 
-import { FeaturedBossWrapper, FeaturedTitle, FeaturedImage, HomeContainer, Title, Subtitle, BossName } from './Home.styles';
+import {
+  FeaturedBossWrapper,
+  FeaturedTitle,
+  FeaturedImage,
+  HomeContainer,
+  Title,
+  Subtitle,
+  BossName,
+  ModalBossImage
+} from './Home.styles';
 import Header from '../../components/Header/Index';
+import { getBosses } from '../../services/bossService'; 
 
 const Home = () => {
-  const [maliketh, setMaliketh] = useState(null);
+  const [featuredBoss, setFeaturedBoss] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-
-    const fetchMaliketh = async () => {
+    const fetchRandomBoss = async () => {
       try {
-        const response = await fetch('https://eldenring.fanapis.com/api/bosses?name=Maliketh');
-        const data = await response.json();
-        if (data && data.data.length > 0) {
-          setMaliketh(data.data[0]);
-        }
+        const bosses = await getBosses();
+        const randomIndex = Math.floor(Math.random() * bosses.length);
+        setFeaturedBoss(bosses[randomIndex]);
       } catch (error) {
-        console.error('Erro ao buscar Maliketh:', error);
+        console.error('Erro ao buscar boss aleatório:', error);
       }
     };
 
-    fetchMaliketh();
+    fetchRandomBoss();
   }, []);
 
   return (
@@ -37,24 +43,30 @@ const Home = () => {
         </Subtitle>
       </HomeContainer>
 
-      <FeaturedBossWrapper>
-        <FeaturedTitle>Boss em destaque:</FeaturedTitle>
-        <BossName>Maliketh, a Lâmina Negra</BossName>
-        <FeaturedImage
-          src={MalikethImage} 
-          alt="Maliketh Elden Ring"
-          onClick={() => setIsOpen(true)} 
-        />
-      </FeaturedBossWrapper>
+      {featuredBoss && (
+        <FeaturedBossWrapper>
+          <FeaturedTitle>Boss em destaque:</FeaturedTitle>
+          <BossName>{featuredBoss.name}</BossName>
+          <FeaturedImage
+            src={featuredBoss.image}
+            alt={featuredBoss.name}
+            onClick={() => setIsOpen(true)}
+          />
+        </FeaturedBossWrapper>
+      )}
 
-      {isOpen && maliketh && (
+      {isOpen && featuredBoss && (
         <Modal onClose={() => setIsOpen(false)}>
           <div>
-            <h2>{maliketh.name}</h2>
-            <p><strong>Localização:</strong> {maliketh.location}</p>
-            <p><strong>Recompensas:</strong> {maliketh.drops}</p>
-            <p><strong>Descrição:</strong> {maliketh.description || 'Sem descrição'}</p>
-            <img src={maliketh.image} alt={maliketh.name} style={{ width: '100%', borderRadius: '10px' }} />
+            <h2>{featuredBoss.name}</h2>
+            <p><strong>Localização:</strong> {featuredBoss.location}</p>
+            <p><strong>Recompensas:</strong> {featuredBoss.drops}</p>
+            <p><strong>Descrição:</strong> {featuredBoss.description || 'Sem descrição'}</p>
+            <ModalBossImage
+              src={featuredBoss.image}
+              alt={featuredBoss.name}
+              style={{ width: '100%', borderRadius: '10px' }}
+            />
           </div>
         </Modal>
       )}

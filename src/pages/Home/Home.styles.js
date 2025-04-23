@@ -46,12 +46,12 @@ export const Banner = styled.div`
   img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Faz com que a imagem cubra o espaço sem distorcer */
+    object-fit: cover; 
     border-radius: 10px;
   }
 
   @media (max-width: 768px) {
-    max-height: 300px;  // Ajusta para telas menores
+    max-height: 300px;  //
   }
 `;
 
@@ -71,10 +71,10 @@ export const FeaturedTitle = styled.h2`
 
 export const FeaturedImage = styled.img`
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 10px rgba(180, 158, 86, 0.5);
   cursor: pointer;
   transition: transform 0.3s;
   margin-bottom: 32px;
@@ -88,4 +88,26 @@ export const BossName = styled.h1`
   font-size: 28px;
   color: #fff;
   margin-top: 1rem;
+`;
+
+export const HighlightedImage = styled.img`
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+`;
+
+export const ModalBossImage = styled.img`
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-top: 15px;
 `;

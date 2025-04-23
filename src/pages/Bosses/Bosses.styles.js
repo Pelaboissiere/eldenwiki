@@ -5,9 +5,9 @@ export const Container = styled.div`
   width: 100%;
 
   display: flex;
-  flex-direction: column;  /* Garante que o conteúdo seja empilhado verticalmente */
-  justify-content: flex-start;  /* Alinha o conteúdo ao topo */
-  align-items: center;  /* Centraliza o conteúdo horizontalmente */
+  flex-direction: column;  
+  justify-content: flex-start;  
+  align-items: center;  
   padding: 2rem;
   box-sizing: border-box;
 `;
