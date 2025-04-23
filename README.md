@@ -31,10 +31,10 @@ React
 🛠️ Como rodar localmente
 
 # Clone o repositório
-git clone https://github.com/seu-usuario/elden-wiki.git
+git clone https://github.com/Pelaboissiere/eldenwiki.git
 
 # Acesse a pasta
-cd elden-wiki
+cd eldenwiki
 
 # Instale as dependências
 npm install
